@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obs.CustomTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvCancelReason"
+    style="@style/ClanProForUBER_News"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/white"
+    android:maxLines="4"
+    android:padding="@dimen/margin_xsmall"
+    android:singleLine="false"
+    android:textColor="@color/textblack"
+    android:textSize="@dimen/text_xlarge"
+    android:textAlignment="viewStart"/>

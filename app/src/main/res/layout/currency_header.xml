@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.obs.CustomTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="25dp"
+    android:paddingBottom="20dp"
+    android:paddingStart="20dp"
+    android:paddingTop="20dp"
+    android:text="Select Country"
+    android:gravity="center"
+    android:textColor="@color/text_light_shadow"
+    android:textSize="@dimen/midi"
+    android:textStyle="bold">
+
+</com.obs.CustomTextView>

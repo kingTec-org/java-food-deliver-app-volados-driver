@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_request_accept"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:layoutDirection="@string/layout_direction">
+
+    <RelativeLayout
+        android:id="@+id/request_accept_lay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_normal"
+        android:background="@color/apptheme">
+
+        <ImageView
+            android:id="@+id/request_accept_list"
+            android:layout_width="@dimen/height_normal"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_xxsmall"
+            android:padding="@dimen/text_medium"
+            android:src="@drawable/list"
+            android:tint="@color/white"
+            android:visibility="gone" />
+
+        <com.obs.CustomTextView
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/request_accept_list"
+            android:paddingStart="@dimen/margin_xlarge"
+            android:text="@string/enroute"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_xxlarge" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/address_details_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/request_accept_lay"
+        android:background="@color/graybackground"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/margin_small"
+        android:paddingStart="@dimen/margin_small">
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvName"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:maxLines="3"
+            android:paddingEnd="@dimen/margin_xsmall"
+            android:paddingTop="@dimen/margin_medium_small"
+            android:scrollbars="vertical"
+            android:text=""
+            android:textColor="@color/textblack"
+            android:textSize="@dimen/text_normal" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvAddress"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvName"
+            android:maxLines="3"
+            android:maxWidth="250dp"
+            android:paddingBottom="@dimen/margin_xxsmall"
+            android:paddingEnd="@dimen/margin_xsmall"
+            android:scrollbars="vertical"
+            android:text=""
+            android:textColor="@color/textblack"
+            android:textSize="@dimen/text_medium"
+            android:textAlignment="viewStart"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0.2dp"
+            android:layout_height="85dp"
+            android:layout_toStartOf="@+id/lltnavigation"
+            android:background="@color/whitelight" />
+
+        <LinearLayout
+            android:id="@+id/lltnavigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_medium_small"
+            android:paddingStart="@dimen/margin_small">
+
+            <ImageView
+                android:layout_width="@dimen/height_normal"
+                android:layout_height="@dimen/height_normal"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:padding="@dimen/text_medium"
+                android:src="@drawable/compass"
+                android:tint="@color/app_green" />
+
+            <com.obs.CustomTextView
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/navigate"
+                android:textColor="@color/textblack"
+                android:textSize="@dimen/text_normal"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/user_details_lay1"
+        android:layout_below="@+id/address_details_lay" />
+    <!--<fragment
+        android:layout_below="@+id/address_details_lay"
+        android:layout_above="@+id/user_details_lay1"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+    <RelativeLayout
+        android:id="@+id/rltCashTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address_details_lay"
+        android:layout_marginStart="@dimen/margin_xsmall"
+        android:layout_marginTop="@dimen/margin_xsmall"
+        android:background="@drawable/d_black_fillboarder"
+        android:paddingBottom="3dp"
+        android:paddingEnd="@dimen/margin_xxsmall"
+        android:paddingStart="@dimen/margin_xxsmall"
+        android:paddingTop="@dimen/rippleStrokeWidth"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/cashimg"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cash"
+            android:tint="@color/apptheme"/>
+
+        <com.obs.CustomTextView
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/cashimg"
+            android:paddingEnd="@dimen/margin_xxsmall"
+            android:paddingStart="@dimen/margin_xxsmall"
+            android:text="@string/cash_trip"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/user_details_lay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/graybackground"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rltUserdetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/graybackground"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_xsmall"
+            android:paddingStart="@dimen/margin_medium_small"
+            android:paddingTop="@dimen/margin_xsmall">
+
+            <com.obs.CustomTextView
+                android:id="@+id/tvpickordrop"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingEnd="@dimen/margin_xxsmall"
+                android:text="@string/pick_up_from"
+                android:textAllCaps="true"
+                android:textColor="@color/apptheme"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold" />
+
+            <com.obs.CustomTextView
+                android:id="@+id/tvpickup"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvpickordrop"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingEnd="@dimen/margin_xxsmall"
+                android:text=""
+                android:textColor="@color/textblack"
+                android:textSize="@dimen/text_normal"
+                android:textAlignment="viewStart"/>
+
+            <ImageView
+                android:id="@+id/shop"
+                android:layout_width="@dimen/margin_large"
+                android:layout_height="@dimen/margin_large"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:src="@drawable/shopping_bag" />
+
+            <com.obs.CustomTextView
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/margin_xxsmall"
+                android:text="@string/pickup"
+                android:textColor="@color/textblack"
+                android:textSize="@dimen/text_xxlarge"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewd"
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/whitelight" />
+
+        <!--<RelativeLayout
+            android:id="@+id/lltpickupinst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/graybackground"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_medium_small"
+            android:visibility="visible">
+
+            <com.obs.CustomTextView
+                android:id="@+id/from"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/margin_xxsmall"
+                android:text="From"
+                android:textAllCaps="true"
+                android:textColor="@color/textlightgray"
+                android:textSize="@dimen/text_medium" />
+
+            <com.obs.CustomTextView
+                android:id="@+id/tvFrom"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/from"
+                android:layout_toEndOf="@+id/from"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/margin_xxsmall"
+                android:text="From"
+                android:textAllCaps="true"
+                android:textColor="@color/textlightgray"
+                android:textSize="@dimen/text_normal" />
+
+            <com.obs.CustomTextView
+                android:id="@+id/order"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/from"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/margin_xxsmall"
+                android:text="@string/order"
+                android:textAllCaps="true"
+                android:textColor="@color/textlightgray"
+                android:textSize="@dimen/text_medium" />
+
+            <com.obs.CustomTextView
+                android:id="@+id/tvOdId"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/order"
+                android:layout_below="@+id/from"
+                android:layout_toEndOf="@+id/order"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/margin_xxsmall"
+                android:text="From"
+                android:textAllCaps="true"
+                android:textColor="@color/textlightgray"
+                android:textSize="@dimen/text_normal" />
+
+            <LinearLayout
+                android:id="@+id/lltOrderList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </RelativeLayout>-->
+        <RelativeLayout
+            android:id="@+id/rltOrderDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/graybackground"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_medium_small"
+            android:visibility="gone">
+
+            <com.obs.CustomTextView
+                android:id="@+id/from"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/margin_xxsmall"
+                android:text="@string/order_details"
+                android:textAllCaps="true"
+                android:textColor="@color/textlightgray"
+                android:textSize="@dimen/text_medium" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/whitelight" />
+
+        <RelativeLayout
+            android:id="@+id/rltstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xxsmall"
+            android:background="@color/graybackground"
+            android:paddingBottom="@dimen/margin_small"
+            android:paddingTop="@dimen/margin_xsmall">
+
+            <ImageView
+                android:id="@+id/ivPen"
+                android:layout_width="@dimen/margin_medium_small"
+                android:layout_height="@dimen/margin_medium_small"
+                android:layout_marginStart="@dimen/margin_medium_small"
+                android:src="@drawable/pencil"
+                android:tint="@color/app_green" />
+
+            <com.obs.CustomTextView
+                android:id="@+id/tvTripstatus"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ivPen"
+                android:paddingStart="@dimen/margin_small"
+                android:text="@string/confirm_order"
+                android:textAllCaps="true"
+                android:textColor="@color/app_green"
+                android:textSize="@dimen/text_normal"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/ivNext"
+                android:layout_width="@dimen/margin_xsmall"
+                android:layout_height="@dimen/margin_xsmall"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:src="@drawable/next"
+                android:tint="@color/app_green" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/whitelight" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xxsmall"
+            android:background="@color/graybackground"
+            android:paddingBottom="@dimen/margin_xsmall"
+            android:paddingTop="@dimen/margin_xsmall">
+
+            <com.obs.CustomButton
+                android:id="@+id/btnTripstatus"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:background="@color/graybutton"
+                android:text="@string/start_trip"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_xxlarge" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,161 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+allprojects {
+    repositories {
+        google()
+    }
+    repositories {
+        maven {
+            url 'https://maven.google.com'
+        }
+    }
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+android {
+
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.trioangle.gofergrocerydriver"
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        manifestPlaceholders = [HOCKEYAPP_APP_ID: "2033d7b76859422f8c48ff1a010d0886"]
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+        ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'
+    }
+
+    bundle {
+        language {
+            // Specifies that the app bundle should not support
+            // configuration APKs for language resources. These
+            // resources are instead packaged with each base and
+            // dynamic feature APK.
+            enableSplit = false
+        }
+        density {
+            // This property is set to true by default.
+            enableSplit = true
+        }
+        abi {
+            // This property is set to true by default.
+            enableSplit = true
+        }
+    }
+
+    buildTypes {
+        release {
+
+            //Other parameters
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            shrinkResources true
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+            //signingConfig signingConfigs.config
+            minifyEnabled true
+            useProguard true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), "proguard-rules.pro"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+
+            //Other parameters
+            debuggable true
+            jniDebuggable false
+            renderscriptDebuggable false
+            //shrinkResources true
+            //signingConfig signingConfigs.config
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+
+            minifyEnabled false
+            useProguard false
+            //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), "proguard-rules.pro"
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        jumboMode = true
+        javaMaxHeapSize "4g"
+    }
+    useLibrary 'org.apache.http.legacy'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.firebase:firebase-messaging:10.2.1'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'com.google.dagger:dagger:2.9'
+    implementation 'com.google.dagger:dagger-compiler:2.9'
+    /*apt 'com.google.dagger:dagger-compiler:2.9'
+                                compile 'com.google.dagger:dagger:2.9'*/
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    implementation 'com.google.android.gms:play-services:10.2.1'
+    implementation 'id.zelory:compressor:1.0.1'
+    implementation project(path: ':custom-font-style-lib', configuration: 'default')
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:1.5.0@aar'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.exifinterface:exifinterface:1.0.0'
+    //compile 'com.hbb20:ccp:1.7.2'
+    //Countrycode
+    implementation 'com.hbb20:ccp:2.2.0'
+    implementation 'com.github.krtkush:LinearTimer:v2.1.0'
+    implementation 'com.jakewharton:butterknife:6.1.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.+'
+    implementation 'com.stripe:stripe-android:6.1.2'
+    // stripe
+    implementation 'net.hockeyapp.android:HockeySDK:5.1.0'
+
+    //Crashlytics
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+
+}
+apply plugin: 'com.google.gms.google-services'

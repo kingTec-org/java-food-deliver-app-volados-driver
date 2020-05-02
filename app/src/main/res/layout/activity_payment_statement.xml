@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_payment_statement"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="@string/layout_direction"
+    tools:context="gofereatsdriver.views.main.paymentstatement.PaymentStatementActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <com.obs.CustomTextView
+        android:id="@+id/tvlistempty"
+        style="@style/ClanProForUBER_Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:padding="20dp"
+        android:text="@string/notrip"
+        android:textAlignment="center"
+        android:textColor="@color/textblack"
+        android:textSize="15dp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcViews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:clipToPadding="false"
+        android:paddingTop="10dp" />
+</RelativeLayout>

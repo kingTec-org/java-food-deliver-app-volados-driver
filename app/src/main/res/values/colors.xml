@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#ffffff</color>
+    <color name="color_primary_dark">#000000</color>
+    <color name="color_accent">@color/app_green</color>
+
+    <color name="app_back_color">#ff222131</color>
+    <color name="app_green">#ff65B963</color>
+    <color name="apptheme">#ff8200</color>
+    <color name="app_blue">#ff1fbad6</color>
+    <color name="app_blue_dark">#ff165190</color>
+    <color name="app_blue_light">#ff3D83D0</color>
+    <color name="app_red">#fff32f00</color>
+    <color name="app_text_black">#ff09091a</color>
+    <color name="app_text_black2">#ff222231</color>
+    <color name="app_text_black4">#ff6b6b76</color>
+    <color name="app_text_black5">#ff9d9da3</color>
+    <color name="app_text_black6">#ffB2B2BA</color>
+    <color name="app_text_black7">#99FFFFFF</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="text_light_shadow">#ff616161</color>
+
+
+    <color name="ub__uber_black_transparent">#80000000</color>
+
+    <color name="black">#000000</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="bar_line_color">#2DFFFFFF</color>
+    <color name="gray">#eaeaea</color>
+    <color name="light_gray">#cfcfcf</color>
+    <color name="text_light_gray">#8f8f8f</color>
+
+    <color name="text_light">#c0c0c0</color>
+    <color name="text_semi_dark">#888888</color>
+
+    <color name="black_text_color">#4b4b4b</color>
+    <color name="gray_color">#9d9d9d</color>
+
+    <!--SwipeRefreshLayout-->
+    <color name="blue">#1976d2</color>
+    <color name="colorblock">#000000</color>
+    <color name="textgray">#8a000000</color>
+    <color name="textlightgray">#80000000</color>
+    <color name="textblack">#de000000</color>
+    <color name="colorblockgray">#646464</color>
+    <color name="whitelight">#559B9A9B</color>
+    <color name="graybackground">#FEFAFF</color>
+    <color name="graybutton">#B4B1B8</color>
+    <color name="enroutebg">#312F3E</color>
+    <color name="graydot">#6C6B79</color>
+
+    <!-- Black and White -->
+    <color name="black_alpha_20">#44000000</color>
+    <color name="black_alpha_40">#66000000</color>
+
+    <color name="black_87">#DE000000</color>
+
+    <color name="notification_action_color_filter">#ffffffff</color>
+    <color name="line_gray">#b3b3b3</color>
+    <color name="text_color">#f6f6f6</color>
+
+    <color name="text_light_blue">#55AAAE</color>
+    <color name="text_shadow">#484848</color>
+
+
+    <color name="calendar_text_unselectable">@color/text_light_blue</color>
+    <!--<color name="calendar_text_highlighted">#ff778088</color>-->
+
+    <color name="ub__uber_black_transparent_black">#ff000000</color>
+    <color name="ub__black">#ff000000</color>
+    <color name="ub__google_red">#ffdf4a32</color>
+    <color name="ub__green">#ff8200</color>
+    <color name="ub__red">#fff32f00</color>
+
+
+    <color name="ub__uber_blue_120">#ff1eacc7</color>
+    <color name="ub__uber_blue_40">#ffa5e3ef</color>
+    <color name="ub__uber_green_80">#ff8200</color>
+    <color name="ub__uber_white_20">#fff2f2f4</color>
+    <color name="ub__ui_core_accent_primary">#ff3d9fc6</color>
+    <color name="ub__ui_core_grey_40">#ffededed</color>
+    <color name="wallet_bright_foreground_disabled_holo_light">#ffb2b2b2</color>
+    <color name="wallet_bright_foreground_holo_dark">#fff3f3f3</color>
+    <color name="wallet_bright_foreground_holo_light">#ff000000</color>
+    <color name="wallet_dim_foreground_disabled_holo_dark">#80bebebe</color>
+    <color name="wallet_dim_foreground_holo_dark">#ffbebebe</color>
+    <color name="wallet_highlighted_text_holo_dark">#6633b5e5</color>
+    <color name="wallet_highlighted_text_holo_light">#6633b5e5</color>
+    <color name="wallet_hint_foreground_holo_dark">#ff808080</color>
+    <color name="wallet_hint_foreground_holo_light">#ff808080</color>
+    <color name="wallet_holo_blue_light">#ff33b5e5</color>
+    <color name="wallet_link_text_light">#ff0000ee</color>
+    <color name="cb_textColor">#ff8f8d8d</color>
+    <color name="order_instructions">#f1e2ae</color>
+    <color name="appbackcolur">#f2f2f4</color>
+    <color name="feedbackbordergray">#7c7c83</color>
+    <color name="rating_header_colur">#e6e4e8</color>
+    <color name="order_black">#ff3a3a48</color>
+    <color name="line">#B2B2BA</color>
+    <color name="ub__uber_black_60">#ff6b6b76</color>
+    <color name="rb_blue_button">#ff368ecd</color>
+
+</resources>

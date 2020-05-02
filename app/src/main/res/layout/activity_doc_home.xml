@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="gofereatsdriver.views.signinsignup.DocHomeActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:id="@+id/rltContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/d_topbordor_gray"
+        android:padding="@dimen/margin_xsmall">
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvVerify"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header"
+            android:background="@drawable/d_skyblue_button_radius"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/d_bottombordor_gray"
+                android:paddingEnd="@dimen/margin_normal"
+                android:paddingStart="@dimen/margin_normal"
+                android:visibility="gone">
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_Book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/personaldoc"
+                    android:textColor="@color/app_text_black4"
+                    android:textSize="@dimen/text_xlarge" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/uploaddocumentstext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+
+                >
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_Book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="@dimen/margin_normal"
+                    android:paddingEnd="@dimen/margin_normal"
+                    android:paddingStart="@dimen/margin_normal"
+                    android:paddingTop="@dimen/margin_normal"
+                    android:text="@string/doc"
+                    android:textColor="@color/app_text_black2"
+                    android:textSize="@dimen/text_xlarge" />
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_Book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/d_bottombordor_gray"
+                    android:paddingBottom="@dimen/margin_normal"
+                    android:paddingEnd="@dimen/margin_normal"
+                    android:paddingStart="@dimen/margin_normal"
+                    android:paddingTop="@dimen/margin_xsmall"
+                    android:text="@string/vehicledoc_msg"
+                    android:textColor="@color/app_text_black4"
+                    android:textSize="@dimen/text_normal"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rltLicenceBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/d_buttomboarder"
+                android:paddingEnd="@dimen/margin_normal"
+                android:paddingStart="@dimen/margin_normal">
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/ivArrow1"
+                    android:paddingTop="@dimen/margin_normal"
+                    android:paddingBottom="@dimen/margin_normal"
+                    android:text="@string/driverlicense_back"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/app_text_black"
+                    android:textSize="@dimen/text_normal" />
+
+                <ImageView
+                    android:id="@+id/ivArrow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleX=".5"
+                    android:scaleY=".5"
+                    android:src="@drawable/next"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltLicenceFront"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/d_buttomboarder"
+                android:paddingStart="@dimen/margin_normal"
+                android:paddingEnd="@dimen/margin_normal">
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="@dimen/margin_normal"
+                    android:paddingTop="@dimen/margin_normal"
+                    android:text="@string/driverlicense_front"
+                    android:layout_toStartOf="@+id/ivArrow2"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/app_text_black"
+                    android:textSize="@dimen/text_normal" />
+
+                <ImageView
+                    android:id="@+id/ivArrow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleX=".5"
+                    android:scaleY=".5"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltInsurance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/d_buttomboarder"
+                android:paddingStart="@dimen/margin_normal"
+                android:paddingEnd="@dimen/margin_normal">
+
+                <ImageView
+                    android:id="@+id/ivArrow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleX=".5"
+                    android:scaleY=".5"
+                    android:src="@drawable/next" />
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_normal"
+                    android:paddingTop="@dimen/margin_normal"
+                    android:text="@string/motor_insurance"
+                    android:layout_toStartOf="@+id/ivArrow3"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/app_text_black"
+                    android:textSize="@dimen/text_normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltRegisteration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/d_buttomboarder"
+                android:paddingEnd="@dimen/margin_normal"
+                android:paddingStart="@dimen/margin_normal">
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="@dimen/margin_normal"
+                    android:paddingTop="@dimen/margin_normal"
+                    android:text="@string/registeration"
+                    android:layout_toStartOf="@+id/ivArrow4"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/app_text_black"
+                    android:textSize="@dimen/text_normal" />
+
+                <ImageView
+                    android:id="@+id/ivArrow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleX=".5"
+                    android:scaleY=".5"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltCarriage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingEnd="@dimen/margin_normal"
+                android:paddingStart="@dimen/margin_normal">
+
+                <ImageView
+                    android:id="@+id/ivArrow5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleX=".5"
+                    android:scaleY=".5"
+                    android:src="@drawable/next" />
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_normal"
+                    android:paddingTop="@dimen/margin_normal"
+                    android:text="@string/contract_carriage"
+                    android:layout_toStartOf="@+id/ivArrow5"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/app_text_black"
+                    android:textSize="@dimen/text_normal" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

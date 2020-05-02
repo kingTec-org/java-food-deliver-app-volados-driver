@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbackcolur"
+    tools:context="gofereatsdriver.views.main.rating.RatingStep2Activity">
+
+
+    <!--<include layout="@layout/header"
+        android:id="@+id/header"/>-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/header" />
+
+            <RelativeLayout
+                android:id="@+id/rltBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header"
+                android:background="@color/rating_header_colur"
+                android:padding="@dimen/margin_xsmall">
+
+                <ImageView
+                    android:id="@+id/ivClosepage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/margin_xsmall"
+                    android:scaleX=".9"
+                    android:scaleY=".9"
+                    android:visibility="visible" />
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tvDeliveryAddress"
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/step_2_rating"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_text_color"
+                    android:textSize="@dimen/text_normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltpickupRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rltBack"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/margin_normal"
+                android:paddingTop="@dimen/margin_normal"
+                android:visibility="visible">
+
+
+                <com.obs.CustomTextView
+
+                    android:id="@+id/tvPickupquestion"
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/how_did_the_delivery_go"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_xlarge" />
+
+                <LinearLayout
+                    android:id="@+id/lltthumbs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvPickupquestion"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_small"
+                    android:weightSum="2">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivThumbs_up"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/image_height_medium"
+                        android:layout_weight="1"
+                        android:src="@drawable/thumbs_up_normal" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivThumbs_down"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/image_height_medium"
+                        android:layout_weight="1"
+                        android:src="@drawable/thumbs_down_normal" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rltFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lltthumbs"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvIssues"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+                    <!--<LinearLayout
+                        android:id="@+id/lltIssues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_xxsmall">
+
+                    </LinearLayout>-->
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rltNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/margin_xsmall"
+        android:paddingEnd="@dimen/margin_xsmall"
+        android:paddingStart="@dimen/margin_xsmall">
+
+        <com.obs.CustomButton
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_dim_blue"
+            android:enabled="false"
+            android:text="@string/next"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

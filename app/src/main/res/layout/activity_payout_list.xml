@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/paypalemailmore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/text_color"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <com.obs.CustomButton
+            android:id="@+id/paypal_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@color/black_87"
+            android:padding="10dp"
+            android:text="@string/delete"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/midi"
+            android:textStyle="bold" />
+
+        <com.obs.CustomButton
+            android:id="@+id/paypal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/paypal_delete"
+            android:background="@color/black_87"
+            android:padding="10dp"
+            android:text="@string/make_default"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/midi"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/paypalemailid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_color"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp">
+
+        <com.obs.CustomTextView
+            android:id="@+id/paypal_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:text="@string/paypal_email"
+            android:textColor="@color/text_shadow"
+            android:textSize="@dimen/midi"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/image_child1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:scaleX=".7"
+            android:scaleY=".7"
+            android:src="@drawable/n2_standard_row_right_caret_gray"
+            android:tint="@color/text_light_shadow" />
+
+        <ImageView
+            android:id="@+id/image_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/paypal_email" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/paypal_ready"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image_child"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/image_child1"
+            android:background="@android:color/transparent"
+            android:text="@string/defaults"
+            android:textSize="@dimen/midi"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".views.main.paytoadmin.PaymentActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="@dimen/margin_xsmall"
+        android:orientation="vertical">
+
+        <com.obs.CustomTextView
+            android:id="@+id/payment"
+            style="@style/ClanProForUBER_Book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_xsmall"
+            android:paddingStart="@dimen/margin_xsmall"
+            android:text="@string/payment"
+            android:textSize="@dimen/text_huge" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/payment_method_text"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_small"
+            android:layout_marginTop="@dimen/margin_xmedium_large"
+            android:text="@string/payment_methods"
+            android:textColor="@color/gray_color"
+            android:textSize="@dimen/text_normal" />
+
+        <LinearLayout
+            android:id="@+id/payment_methods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rltCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/payment_cash"
+                android:background="@drawable/background_white"
+                android:padding="@dimen/margin_xsmall"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivCard"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_xsmall"
+                    android:src="@drawable/hd_card" />
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tvCard"
+                    style="@style/ClanProForUBER_Book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_toEndOf="@+id/ivCard"
+                    android:text="@string/credit_or_debit"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <ImageView
+                    android:id="@+id/ivCardTick"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_xsmall"
+                    android:src="@drawable/tick_green"
+                    android:tint="@color/apptheme"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltAddCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_white"
+                android:padding="@dimen/margin_xsmall">
+
+                <ImageView
+                    android:id="@+id/ivAddCard"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="@dimen/margin_xsmall"
+                    android:src="@drawable/hd_card" />
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tvAddCard"
+                    style="@style/ClanProForUBER_Book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_toEndOf="@+id/ivAddCard"
+                    android:text="@string/credit_or_debit"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

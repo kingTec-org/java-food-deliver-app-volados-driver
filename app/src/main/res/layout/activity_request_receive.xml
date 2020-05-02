@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:timer="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/apptheme">
+
+    <RelativeLayout
+        android:id="@+id/rrdlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:background="@color/apptheme">
+
+
+        <gofereatsdriver.utils.CircularMusicProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cprogressbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:padding="@dimen/margin_normal"
+            android:src="@drawable/mapimg"
+            android:visibility="visible"
+            app:border_color="@color/app_green"
+            app:border_width="@dimen/margin_xsmall"
+            app:centercircle_diammterer="1"
+            app:draw_anticlockwise="true"
+            app:progress_color="@color/apptheme"
+            app:progress_startAngle="280" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/map_snap"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/mapimg"
+            android:visibility="gone"
+            app:civ_border_color="@color/apptheme"
+            app:civ_border_width="@dimen/rippleStrokeWidth" />
+
+        <io.github.krtkush.lineartimer.LinearTimerView
+            android:id="@+id/linearTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            timer:initialColor="@color/apptheme"
+            timer:progressColor="@color/apptheme"
+            timer:startingPoint="270"
+            timer:strokeWidth="@dimen/rippleStrokeWidth" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_xxsmall"
+        android:layout_marginStart="@dimen/margin_xxsmall"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvReqMin"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MINUTES"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_xxlarge" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvReqRestaurantName"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xxsmall"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_xxlarge" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvReqAddress"
+            style="@style/ClanProForUBER_Book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_xlarge" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:divider="@drawable/divider"
+            android:dividerPadding="@dimen/margin_xxsmall"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <com.obs.CustomTextView
+                style="@style/ClanProForUBER_Book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xxsmall"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:paddingEnd="@dimen/margin_xsmall"
+                android:text="4.5 * "
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large" />
+
+            <com.obs.CustomTextView
+                style="@style/ClanProForUBER_Book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xxsmall"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/margin_xsmall"
+                android:text="UBERX"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

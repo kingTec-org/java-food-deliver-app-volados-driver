@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_signin_signup_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/apptheme"
+    tools:context="gofereatsdriver.views.signinsignup.SigninSignupHomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.obs.CustomTextView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/applogo" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/signinbottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/margin_xlarge"
+        android:paddingTop="@dimen/margin_xlarge">
+
+        <LinearLayout
+            android:id="@+id/signinup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.obs.CustomTextView
+                android:id="@+id/tvSignin"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_normal"
+                android:layout_marginEnd="@dimen/margin_xsmall"
+                android:layout_weight="1"
+                android:background="@drawable/d_bordor"
+                android:gravity="center"
+                android:text="@string/signin"
+                android:textColor="@color/app_text_black"
+                android:textSize="@dimen/text_large" />
+
+            <com.obs.CustomTextView
+                android:id="@+id/tvSignup"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_normal"
+                android:layout_marginStart="@dimen/margin_xsmall"
+                android:layout_weight="1"
+                android:background="@color/app_green"
+                android:gravity="center"
+                android:text="@string/register"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/margin_xsmall"
+        android:background="@drawable/d_topbordor"
+       >
+    <com.obs.CustomTextView
+            android:id="@+id/tvRiderApp"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_normal"
+            android:paddingTop="10dp"
+            android:text="@string/looking"
+            android:textAlignment="viewStart"
+            android:textColor="@color/app_text_black2"
+            android:textSize="14dp"
+            android:paddingStart="@dimen/margin_medium_small"
+            android:layout_marginEnd="100dp"
+            android:paddingBottom="5dp"
+
+        />
+        <TextView
+            android:id="@+id/languagetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:text="@string/language"
+            android:textColor="@color/app_green"
+            android:textSize="14dp"
+            android:transitionName="language"
+            android:paddingTop="12dp"/>
+
+        <TextView
+            android:id="@+id/language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/languagetext"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:text="English"
+            android:textColor="@color/app_text_black2"
+            android:textSize="14sp"
+            android:paddingBottom="5dp"
+            />
+    </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

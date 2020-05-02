@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_payment_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="@string/layout_direction"
+    tools:context="gofereatsdriver.views.main.payment.AddPayment">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@color/white">
+
+        <com.obs.CustomTextView
+            android:id="@+id/payment_msg"
+            style="@style/ClanProForUBER_Book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/addpayment_msg"
+            android:textColor="@color/textgray"
+            android:textSize="@dimen/text_xlarge" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/payment_msg"
+            android:layout_marginTop="@dimen/margin_normal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/emaitext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/paypalemail"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorblock"
+                    android:textColorHint="#ffc2c2c2"
+                    android:textSize="@dimen/text_normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.obs.CustomTextView
+                android:id="@+id/emailclose"
+                style="@style/uber_clone_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/emailName"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:padding="@dimen/margin_xxsmall"
+                android:text="R"
+                android:textSize="@dimen/text_normal" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.obs.CustomButton
+        android:id="@+id/save"
+        style="@style/ClanProForUBER_Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@drawable/d_background_black"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_xlarge" />
+</RelativeLayout>

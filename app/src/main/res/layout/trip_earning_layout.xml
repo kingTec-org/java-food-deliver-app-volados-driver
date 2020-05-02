@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rellay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/d_buttomboarder"
+    android:layoutDirection="@string/layout_direction"
+    android:paddingBottom="20dp"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp"
+    android:paddingTop="20dp">
+
+    <com.obs.CustomTextView
+        android:id="@+id/dailytrip"
+        style="@style/ClanProForUBER_News"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="start|center_vertical"
+        android:paddingBottom="5dp"
+        android:textColor="@color/colorblock"
+        android:textSize="16sp" />
+
+    <com.obs.CustomTextView
+        style="@style/ClanProForUBER_Book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dailytrip"
+
+        android:layout_centerVertical="true"
+        android:gravity="start|center_vertical"
+        android:paddingTop="5dp"
+        android:textColor="@color/colorblock"
+        android:textSize="16sp" />
+
+    <com.obs.CustomTextView
+        android:id="@+id/dailyamount"
+
+        style="@style/ClanProForUBER_News"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/dailyarrow"
+        android:gravity="end|center_vertical"
+
+        android:paddingEnd="10dp"
+        android:textColor="@color/cb_textColor"
+        android:textSize="16sp" />
+
+    <com.obs.CustomTextView
+        android:id="@+id/dailyarrow"
+        style="@style/uber_clone_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="end|center_vertical"
+        android:text="q"
+        android:textSize="14dp" />
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gofereatsdriver.views.main.paytoadmin.PayToAdminActivity">
+
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:id="@+id/wallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_margin="@dimen/margin_normal">
+
+        <ImageView
+            android:id="@+id/ivWalletImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:src="@drawable/money1" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvWallet"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivWalletImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/your_pay_to"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvOweAmount"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWallet"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_huge" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltAddAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/margin_xsmall"
+        android:paddingTop="@dimen/margin_xsmall">
+
+        <com.obs.CustomButton
+            android:id="@+id/btnAddAmount"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:background="@color/apptheme"
+            android:text="@string/pay_to"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_xxlarge" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

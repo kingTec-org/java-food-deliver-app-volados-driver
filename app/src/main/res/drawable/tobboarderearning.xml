@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="0.1dp"
+                android:color="@color/switch_thumb_disabled_material_light" />
+
+
+        </shape>
+    </item>
+
+    <item android:top="0.5dp">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="0dp"
+                android:color="@color/apptheme" />
+            <solid android:color="@color/apptheme" />
+        </shape>
+    </item>
+
+</layer-list>

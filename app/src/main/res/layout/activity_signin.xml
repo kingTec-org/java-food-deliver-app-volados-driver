@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_signin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="gofereatsdriver.views.signinsignup.SigninActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:id="@+id/mainlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.obs.CustomButton
+                android:id="@+id/btnSignIn"
+                style="@style/ClanProForUBER_Book"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_normal"
+                android:layout_below="@+id/passwordlayout"
+                android:layout_marginEnd="@dimen/margin_xsmall"
+                android:layout_marginStart="@dimen/margin_xsmall"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:background="@drawable/background_blue_gray"
+                android:enabled="false"
+                android:text="@string/signin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnSignIn"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:gravity="center">
+
+                <com.obs.CustomButton
+                    android:id="@+id/btnForgotPassword"
+                    style="@style/ClanProForUBER_Book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/driverforgotboarder"
+                    android:paddingEnd="@dimen/margin_normal"
+                    android:paddingStart="@dimen/margin_normal"
+                    android:text="@string/forgotpassword"
+                    android:textColor="@color/app_text_black2"
+                    android:textSize="@dimen/text_small" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/mobilelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:transitionName="mobilelayout">
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:paddingBottom="@dimen/margin_xxsmall"
+                    android:paddingTop="@dimen/margin_xxsmall"
+                    android:text="@string/mobile_number"
+                    android:textColor="@color/app_text_black2"
+                    android:textSize="@dimen/text_large" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mobile_txt"
+                    android:background="@color/white">
+
+                    <!--<com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_small"
+                        app:textSize="@dimen/text_xxlarge"
+                        android:layout_marginTop="@dimen/margin_xsmall"
+                        app:arrowSize="@dimen/text_large"
+                        app:hideNameCode="true"/>-->
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_xsmall"
+                        app:ccpDialog_keyboardAutoPopup="false"
+                        app:ccp_arrowSize="1sp"
+                        app:ccp_showNameCode="false"
+                        app:ccp_textSize="@dimen/text_xxlarge" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_xsmall"
+                        android:layout_toEndOf="@+id/ccp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_xsmall">
+
+                            <com.obs.CustomEditText
+                                android:id="@+id/edtMobile"
+                                style="@style/ClanProForUBER_News"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:inputType="text"
+                                android:singleLine="true"
+                                android:textSize="@dimen/text_normal"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.obs.CustomTextView
+                android:id="@+id/passwordtext"
+                style="@style/ClanProForUBER_News"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobilelayout"
+                android:layout_marginBottom="@dimen/margin_xsmall"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:paddingBottom="@dimen/margin_xxsmall"
+                android:paddingTop="@dimen/margin_xsmall"
+                android:text="@string/password"
+                android:textColor="@color/app_text_black2"
+                android:textSize="@dimen/text_large" />
+
+            <RelativeLayout
+                android:id="@+id/passwordlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobilelayout"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/edtPassword"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/text_large" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="gofereatsdriver.views.main.cancel.CancelActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_xxlarge">
+
+            <RelativeLayout
+                android:id="@+id/rltCancelReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/d_bordor">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:paddingBottom="@dimen/margin_xsmall"
+                    android:paddingStart="@dimen/margin_xxsmall"
+                    android:paddingTop="@dimen/margin_xsmall"
+                    android:spinnerMode="dialog"
+                    />
+            </RelativeLayout>
+
+            <com.obs.CustomEditText
+                android:id="@+id/edtCancelReason"
+                style="@style/ClanProForUBER_News"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/rltCancelReason"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:background="@drawable/d_bordor"
+                android:hint="@string/other_reasons"
+                android:inputType="text"
+                android:lines="5"
+                android:gravity="start"
+                android:padding="@dimen/margin_xxsmall"
+                android:text=""
+                android:textAlignment="viewStart"/>
+
+            <com.obs.CustomButton
+                android:id="@+id/btnCancelReason"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtCancelReason"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:background="@drawable/background_black_full"
+                android:text="@string/cancel_order"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_xlarge" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

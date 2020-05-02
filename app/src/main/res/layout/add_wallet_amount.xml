@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    >
+
+
+    <com.obs.CustomTextView
+        android:id="@+id/tvEnterAmount"
+        style="@style/ClanProForUBER_News"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_xsmall"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:duplicateParentState="true"
+        android:gravity="center_horizontal"
+        android:text="@string/enter_amount"
+        android:textColor="@color/gray_color"
+        android:textSize="@dimen/text_large" />
+
+    <RelativeLayout
+        android:id="@+id/rltEnterAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvEnterAmount"
+        android:layout_centerHorizontal="true">
+
+        <com.obs.CustomEditText
+            android:id="@+id/edtOweAmount"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:inputType="number"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:textSize="@dimen/text_large" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rltEnterAmount"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@color/textgray" />
+
+    <com.obs.CustomTextView
+        android:id="@+id/currency_symbol_wallet"
+        style="@style/ClanProForUBER_Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view"
+        android:layout_toStartOf="@+id/rltEnterAmount"
+        android:text=""
+        android:paddingBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textAlignment="viewStart"/>
+
+    <RelativeLayout
+        android:id="@+id/rltPaymentMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginEnd="@dimen/margin_xsmall"
+        android:layout_marginStart="@dimen/margin_xsmall"
+        android:layout_marginTop="@dimen/margin_xsmall">
+
+        <ImageView
+            android:id="@+id/ivPaymentImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_xxsmall"
+            android:src="@drawable/credit_card" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvPaymentMethod"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_xsmall"
+            android:layout_toEndOf="@+id/ivPaymentImage"
+            android:text="@string/add_card"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvChange"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_xsmall"
+            android:text="@string/change"
+            android:textAllCaps="false"
+            android:textColor="@color/app_green"
+            android:textSize="@dimen/text_large" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rltPaymentMethod"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_xsmall"
+        android:layout_marginStart="@dimen/margin_xsmall"
+        android:layout_marginTop="@dimen/margin_normal">
+
+        <com.obs.CustomButton
+            android:id="@+id/btnAddMoney"
+            style="@style/ClanProForUBER_News"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_color"
+            android:text="@string/pay_to"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_xxlarge" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_vehicl_information"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="@string/layout_direction"
+    tools:context="gofereatsdriver.views.main.fragments.AccountFragment">
+
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:background="@drawable/d_buttomboarder"
+        android:padding="10dp">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/ivCarimage"
+            android:background="@color/black_alpha_40" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivCarimage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true" />
+
+        <ProgressBar
+            android:id="@+id/progressBarciv"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/view"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/gray"
+            android:indeterminateTintMode="src_atop"
+            android:padding="5dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/view"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tvCarname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="carname"
+                android:textColor="@color/colorblock"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvCarnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCarname"
+                android:paddingBottom="10dp"
+                android:paddingStart="20dp"
+                android:text="carnumber"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tvCartype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCarnumber"
+                android:paddingBottom="10dp"
+                android:paddingStart="20dp"
+                android:text="cartype"
+                android:textColor="@color/textgray"
+                android:textSize="16dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

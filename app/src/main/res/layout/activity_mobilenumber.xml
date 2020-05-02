@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layoutDirection="@string/layout_direction">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <LinearLayout
+        android:id="@+id/mobilelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rltNext"
+        android:layout_below="@+id/header"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:transitionName="mobilelayout">
+
+        <com.obs.CustomTextView
+            android:id="@+id/entermobileno"
+            style="@style/ClanProForUBER_Book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:text="@string/getmobilenumber"
+            android:textColor="@color/app_text_black2"
+            android:textSize="@dimen/text_xxlarge"
+            android:transitionName="mobilenumber" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mobile_txt"
+            android:background="@color/white">
+
+            <!-- <com.hbb20.CountryCodePicker
+                 android:id="@+id/ccMobile"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="16dp"
+                 app:textSize="@dimen/text_xxlarge"
+                 app:arrowSize="16sp"
+                 app:hideNameCode="true"/>-->
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                app:ccpDialog_keyboardAutoPopup="false"
+                app:ccp_arrowSize="1sp"
+                app:ccp_showNameCode="false"
+                app:ccp_textSize="@dimen/text_xxlarge"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ccMobile"
+                android:background="@drawable/d_buttomboardermobilenumber">
+
+                <com.obs.CustomEditText
+                    android:id="@+id/edtMobile"
+                    style="@style/ClanProForUBER_Book"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@android:color/transparent"
+                    android:inputType="number"
+                    android:paddingBottom="@dimen/margin_xxsmall"
+                    android:textSize="@dimen/text_xxlarge" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvMobileError"
+            style="@style/ClanProForUBER_Book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:text="@string/InvalidMobileNumber"
+            android:textColor="@color/app_red"
+            android:textSize="@dimen/text_normal"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltNext"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@drawable/roundnextbuttonlayout">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/arrownextright" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/app_green"
+            android:indeterminateTintMode="src_atop"
+            android:visibility="gone"></ProgressBar>
+    </RelativeLayout>
+</RelativeLayout>

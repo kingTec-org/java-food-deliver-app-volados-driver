@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="@string/layout_direction"
+    tools:context="gofereatsdriver.views.main.fragments.AccountFragment">
+
+    <RelativeLayout
+        android:id="@+id/drivermainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/apptheme"
+        android:paddingBottom="@dimen/margin_xsmall"
+        android:paddingTop="@dimen/margin_xsmall">
+
+
+        <ImageView
+            android:id="@+id/ivBackarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingEnd="@dimen/margin_xsmall"
+            android:paddingStart="@dimen/margin_normal"
+            android:scaleX=".6"
+            android:scaleY=".6"
+            android:src="@drawable/gobackleftarrow"
+            android:tint="@color/white" />
+
+
+        <com.obs.CustomTextView
+            android:id="@+id/close"
+            style="@style/uber_clone_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:text="R"
+            android:textColor="@color/white"
+            android:textSize="@dimen/margin_normal"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/titletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_xlarge"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:layout_toEndOf="@+id/ivBackarrow"
+            android:paddingTop="@dimen/margin_xxsmall"
+            android:text="@string/profile"
+            android:textColor="@color/white"
+            android:textSize="@dimen/margin_normal" />
+
+        <ImageView
+            android:id="@+id/editicon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:background="@drawable/pencil"
+            android:visibility="gone" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvCheckTick"
+            style="@style/uber_clone_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:text="4"
+            android:textColor="#ffc2c2c2"
+            android:textSize="@dimen/text_huge"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cameraicon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="31dp"
+            android:background="@drawable/cameraicon"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/drivermainlayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/drivermainlayout">
+
+            <RelativeLayout
+                android:id="@+id/titleback"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/apptheme"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfileimage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/margin_xxlarge"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@+id/ivProfileimage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="19dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/gray"
+                    android:indeterminateTintMode="src_atop"
+                    android:padding="5dp">
+
+                </ProgressBar>
+            </RelativeLayout>
+
+
+            <com.obs.CustomTextView
+                android:id="@+id/personicon"
+                style="@style/uber_clone_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleback"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_xsmall"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="42dp"
+                android:text="P"
+                android:textColor="#ffc2c2c2"
+                android:textSize="@dimen/text_huge" />
+
+            <LinearLayout
+                android:id="@+id/namelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleback"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_toEndOf="@+id/personicon"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_first"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/back"
+                    android:layout_marginEnd="@dimen/margin_xxsmall"
+                    android:layout_weight="1">
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/input_first"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/first"
+                        android:inputType="textPersonName"
+                        android:singleLine="true"
+                        android:textColor="@color/colorblock"
+                        android:textSize="@dimen/text_large"
+                        android:textAlignment="viewStart"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_last"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_layout_first"
+                    android:layout_marginStart="@dimen/margin_xxsmall"
+                    android:layout_weight="1">
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/input_last"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/last"
+                        android:inputType="textPersonName"
+                        android:singleLine="true"
+                        android:textColor="@color/colorblock"
+                        android:textSize="@dimen/text_large"
+                        android:textAlignment="viewStart"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/emaillayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/namelayout"
+                android:layout_below="@+id/namelayout"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/emaitext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/email"
+                        android:textColor="@color/colorblock"
+                        android:textColorHint="#ffc2c2c2"
+                        android:textSize="@dimen/text_normal"
+                        android:textAlignment="viewStart"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mobile_txtlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/emaillayout"
+                android:layout_below="@+id/emaillayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_xxsmall"
+                    android:text="@string/mobile"
+                    android:textColor="#ffc2c2c2"
+                    android:textSize="@dimen/text_normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fllayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/emaillayout"
+                android:layout_below="@+id/mobile_txtlayout"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_xsmall">
+
+                <!--<com.hbb20.CountryCodePicker
+                    android:id="@+id/mobile_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_textSize="@dimen/text_xlarge"
+                    app:arrowSize="0sp"
+                    android:clickable="false"
+                    app:hideNameCode="true"
+                    app:ccpClickable="false"/>-->
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/mobile_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    app:ccpDialog_keyboardAutoPopup="false"
+                    app:ccp_arrowSize="1sp"
+                    app:ccp_clickable="false"
+                    app:ccp_showNameCode="false"
+                    app:ccp_textSize="@dimen/text_xlarge" />
+
+                <EditText
+                    android:id="@+id/edtmobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/mobile_code"
+                    android:clickable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="7200279088"
+                    android:maxLines="10"
+                    android:textColor="@color/colorblock"
+                    android:textColorHint="#ffc2c2c2"
+                    android:textSize="@dimen/text_normal"
+                    android:transitionName="mobilenumber" />
+            </RelativeLayout>
+
+            <com.obs.CustomTextView
+                android:id="@+id/homeicon"
+                style="@style/uber_clone_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fllayout"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_xsmall"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="42dp"
+                android:text="E"
+                android:textColor="#ffc2c2c2"
+                android:textSize="@dimen/text_huge" />
+
+            <RelativeLayout
+                android:id="@+id/addresslayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/fllayout"
+                android:layout_below="@+id/fllayout"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addressName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edtStreetAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/address1"
+                        android:textColor="@color/colorblock"
+                        android:textColorHint="#ffc2c2c2"
+                        android:textSize="@dimen/text_normal"
+                        android:textAlignment="viewStart"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/addresslayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/fllayout"
+                android:layout_below="@+id/addresslayout1"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addressName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edtAreaAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/address2"
+                        android:textColor="@color/colorblock"
+                        android:textColorHint="#ffc2c2c2"
+                        android:textSize="@dimen/text_normal"
+                        android:textAlignment="viewStart"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/citylayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/addresslayout2"
+                android:layout_below="@+id/addresslayout2"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/cityName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edtCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/city"
+                        android:textColor="@color/colorblock"
+                        android:textColorHint="#ffc2c2c2"
+                        android:textSize="@dimen/text_normal"
+                        android:textAlignment="viewStart"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/statelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/citylayout"
+                android:layout_below="@+id/citylayout"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/stateName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edtState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/state"
+                        android:textColor="@color/colorblock"
+                        android:textColorHint="#ffc2c2c2"
+                        android:textSize="@dimen/text_normal"
+                        android:textAlignment="viewStart"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/postlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/statelayout"
+                android:layout_below="@+id/statelayout"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/postName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edtPostal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/postalcode"
+                        android:textColor="@color/colorblock"
+                        android:textColorHint="#ffc2c2c2"
+                        android:textSize="@dimen/text_normal"
+                        android:textAlignment="viewStart"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

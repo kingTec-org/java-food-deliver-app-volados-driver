@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="gofereatsdriver.views.main.payment.PayoutBankDetailsActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <com.obs.CustomTextView
+                android:id="@+id/payoutaddress_msg"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight=".2"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="10dp"
+                android:text="@string/stripe_details"
+                android:textAlignment="center"
+                android:textColor="@color/text_light_shadow"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/payoutaddress_msg"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight=".6"
+                android:background="@color/text_color"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/address_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/payoutaddress_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="@string/country"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/payoutaddress_currency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="@string/currencies"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/ssn_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/ssn"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/routing_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/routing_number"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/clearing_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/clearing_code"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/etCompanyAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="Address"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/etAccountName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="Account Name"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/Ac_no_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/account_number"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/bank_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/bank_name"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/branch_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/branch_name"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/bank_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/bank_code"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/branch_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/branch_code"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/bsb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/bsb"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/transit_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/transit_number"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/institute_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/institute_number"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/sort_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/sort_code"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/Ac_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/account_number"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/Ac_owner_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/account_owner_name"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/ph_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/phone_number"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/Iban_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                        android:hint="@string/iban_number"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/IbanSwift"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                        android:hint="Iban / Swift / IFSC / Routing"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="20dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/Ac_holder_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/account_holder_name"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="@string/gender1"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:visibility="gone"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/address1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/address_1"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/address2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/address_2"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/city"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/state_province"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:textAlignment="viewStart"/>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/postalcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/d_bottom"
+                        android:hint="@string/postal_code"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_shadow"
+                        android:textColorHint="@color/app_green"
+                        android:textSize="@dimen/midi"
+                        android:textAlignment="viewStart"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.obs.CustomTextView
+                android:id="@+id/addresskana_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight=".2"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="10dp"
+                android:text="@string/address_kana"
+                android:textAlignment="center"
+                android:textColor="@color/text_light_shadow"
+                android:textSize="@dimen/midi"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <include
+                layout="@layout/address_kana"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <com.obs.CustomTextView
+                android:id="@+id/addresskanji_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight=".2"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="10dp"
+                android:text="@string/address_kanji"
+                android:textAlignment="center"
+                android:textColor="@color/text_light_shadow"
+                android:textSize="@dimen/midi"
+                android:textStyle="bold"
+                android:visibility="gone"
+                />
+
+
+            <include
+                layout="@layout/address_kanji"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <com.obs.CustomTextView
+                android:id="@+id/legal_doc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/d_bottom"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="@string/legal_document"
+                android:maxLines="1"
+                android:paddingBottom="15dp"
+                android:paddingStart="10dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/text_shadow"
+                android:textColorHint="@color/app_green"
+                android:textSize="@dimen/midi"
+                android:textAlignment="viewStart"/>
+
+
+            <com.obs.CustomButton
+                android:id="@+id/payout_submit"
+                style="@style/ClanProForUBER_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/margin_normal"
+                android:background="@drawable/d_background_black"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_xlarge" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

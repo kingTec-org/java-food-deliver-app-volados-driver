@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_daily_earning_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="@string/layout_direction"
+    tools:context="gofereatsdriver.views.main.paymentstatement.DailyEarningDetails">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/d_buttomboarder"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tvDate"
+                    style="@style/ClanProForUBER_Book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorblock"
+                    android:textSize="14sp" />
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tvDailyPrice"
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/ub__green"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/d_buttomboarder"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/tripearnings"
+                    android:textAlignment="center"
+                    android:textColor="@color/textgray"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp">
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/faretxt"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fare"
+                        android:textAlignment="center"
+                        android:textColor="@color/textblack"
+                        android:textSize="16sp" />
+
+                    <com.obs.CustomTextView
+                        style="@style/uber_clone_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/faretxt"
+                        android:paddingStart="5dp"
+                        android:text="w"
+                        android:textAlignment="center"
+                        android:textColor="@color/switch_thumb_normal_material_dark"
+                        android:textSize="16sp" />
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvBaseFare"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textblack"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp">
+
+                    <com.obs.CustomTextView
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/uberfee"
+                        android:textAlignment="center"
+                        android:textColor="@color/textblack"
+                        android:textSize="16sp" />
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvAccess"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentEnd="true"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textblack"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone">
+
+                    <com.obs.CustomTextView
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/timefare"
+                        android:textAlignment="center"
+                        android:textColor="@color/textblack"
+                        android:textSize="18sp" />
+
+                    <com.obs.CustomTextView
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textblack"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/d_buttomboarder"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="20dp">
+
+                    <com.obs.CustomTextView
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/totaluberearning"
+                        android:textAlignment="center"
+                        android:textColor="@color/textblack"
+                        android:textSize="16sp" />
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvTotalDriverEarning"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textblack"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp">
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvCashcollectamount"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textblack"
+                        android:textSize="16sp" />
+
+                    <com.obs.CustomTextView
+                        style="@style/uber_clone_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/fontTextView5"
+                        android:paddingStart="5dp"
+                        android:text="w"
+                        android:textAlignment="center"
+                        android:textColor="@color/switch_thumb_normal_material_dark"
+                        android:textSize="18sp" />
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/fontTextView5"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/cashcollected"
+                        android:textAlignment="center"
+                        android:textColor="@color/textblack"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_Book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/riderfaresearn"
+                    android:textColor="@color/textgray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltBankDeposit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/d_buttomboarder"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp">
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tvBankDeposit"
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textblack"
+                    android:textSize="18sp" />
+
+                <com.obs.CustomTextView
+                    android:id="@+id/fontTextView4"
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/bankdeposit"
+                    android:textAlignment="center"
+                    android:textColor="@color/textblack"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:divider="@drawable/divider"
+                android:dividerPadding="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:visibility="gone">
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvOnlineTime"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/textblack"
+                        android:textSize="16sp" />
+
+                    <com.obs.CustomTextView
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/timeonline"
+                        android:textAlignment="center"
+                        android:textColor="@color/textgray"
+                        android:textSize="11sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp">
+
+                    <com.obs.CustomTextView
+                        android:id="@+id/tvCompletedTrips"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/textblack"
+                        android:textSize="16sp" />
+
+                    <com.obs.CustomTextView
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/completedtrips"
+                        android:textAlignment="center"
+                        android:textColor="@color/textgray"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.obs.CustomTextView
+                style="@style/ClanProForUBER_News"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/secondary_text_disabled_material_light"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:text="@string/tripearnings"
+                android:textColor="@color/textgray"
+                android:textSize="14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingTop="10dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
+

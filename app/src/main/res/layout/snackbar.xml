@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/snackbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp">
+
+    <com.obs.CustomTextView
+        android:id="@+id/snack_message"
+        style="@style/ClanProForUBER_Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/snack_button"
+        android:paddingBottom="20dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <com.obs.CustomTextView
+        android:id="@+id/snack_button"
+        style="@style/ClanProForUBER_Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:paddingBottom="20dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="20dp"
+        android:text=""
+        android:textColor="@color/app_green"
+        android:textSize="16sp" />
+</RelativeLayout>

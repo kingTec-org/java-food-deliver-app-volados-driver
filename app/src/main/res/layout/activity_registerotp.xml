@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+
+    <com.obs.CustomTextView
+        android:id="@+id/tvCodetext"
+        style="@style/ClanProForUBER_Book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@color/white"
+        android:text="@string/enter4digit"
+        android:textColor="@color/app_text_black2"
+        android:textSize="@dimen/text_xlarge" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_toEndOf="@+id/ccp"
+        android:background="@color/white">
+
+        <com.obs.CustomEditText
+            android:id="@+id/edtOne"
+            style="@style/ClanProForUBER_Book"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="start"
+            android:hint="0"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingBottom="@dimen/margin_xsmall"
+            android:textColor="@color/app_text_black2"
+            android:textSize="@dimen/text_xxlarge"></com.obs.CustomEditText>
+
+
+        <com.obs.CustomEditText
+            android:id="@+id/edtTwo"
+            style="@style/ClanProForUBER_Book"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/edtOne"
+            android:gravity="start"
+            android:hint="0"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingBottom="@dimen/margin_xsmall"
+            android:textColor="@color/app_text_black2"
+            android:textSize="@dimen/text_xxlarge"></com.obs.CustomEditText>
+
+        <com.obs.CustomEditText
+            android:id="@+id/edtThree"
+            style="@style/ClanProForUBER_Book"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_toEndOf="@+id/edtTwo"
+            android:gravity="start"
+            android:hint="0"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingBottom="@dimen/margin_xsmall"
+            android:textColor="@color/app_text_black2"
+            android:textSize="@dimen/text_xxlarge" />
+
+
+        <com.obs.CustomEditText
+            android:id="@+id/edtFour"
+            style="@style/ClanProForUBER_Book"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_toEndOf="@+id/edtThree"
+            android:gravity="start"
+            android:hint="0"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingBottom="10dp"
+            android:textColor="@color/app_text_black2"
+            android:textSize="@dimen/text_xxlarge" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rltNext"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/margin_xlarge"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:background="@drawable/roundnextbuttonlayout">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/arrownextright" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/app_green"
+                android:indeterminateTintMode="src_atop"
+                android:visibility="gone"></ProgressBar>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/rltNext"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/margin_xsmall"
+            android:layout_marginStart="@dimen/margin_normal">
+
+            <com.obs.CustomTextView
+                android:id="@+id/tvResend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:enabled="false"
+                android:text="@string/resend"
+                android:textColor="@color/app_text_black4"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:id="@+id/tvResend_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tvResend"
+                android:paddingStart="@dimen/margin_normal"
+                android:text="00:30"
+                android:textColor="@color/app_text_black4"
+                android:textSize="@dimen/text_large" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gofereatsdriver.payoutbank.PayoutEmailListActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/payout_stripe"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.obs.CustomTextView
+        android:id="@+id/payoutmain_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="125dp"
+        android:text="@string/payout_title"
+        android:textAlignment="center"
+        android:textColor="@color/text_light_shadow"
+        android:textSize="@dimen/margin_xlarge"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+
+    <com.obs.CustomTextView
+        android:id="@+id/payoutmain_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/payoutmain_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/payout_msg"
+        android:textAlignment="center"
+        android:textColor="@color/text_light_shadow"
+        android:textSize="@dimen/text_xlarge"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+
+    <com.obs.CustomTextView
+        android:id="@+id/payoutmain_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/payoutmain_msg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/payout_link"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_xlarge"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <com.obs.CustomButton
+        android:id="@+id/payout_stripe"
+        style="@style/ClanProForUBER_Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_normal"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/d_background_black"
+        android:text="@string/add_stripe_payout"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_xlarge"
+        android:visibility="visible" />
+
+</RelativeLayout>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbackcolur"
+    android:orientation="vertical"
+    tools:context="gofereatsdriver.views.main.pickuporderdetails.ContactActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:id="@+id/rltContactResturant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/margin_small">
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvSendertext"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margin_small"
+            android:text="@string/sender"
+            android:textAllCaps="true"
+            android:textColor="@color/app_text_black5"
+            android:textSize="@dimen/text_medium" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvProjectName"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSendertext"
+            android:paddingStart="@dimen/margin_small"
+            android:text="Project Pizza"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvResturantMangName"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvProjectName"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:paddingStart="@dimen/margin_small"
+            android:text="Kevin Owens"
+            android:textAllCaps="true"
+            android:textColor="@color/gray_color"
+            android:textSize="@dimen/text_normal"
+            android:visibility="gone" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvResturantNumber"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvResturantMangName"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:paddingStart="@dimen/margin_small"
+            android:text="+1234567890"
+            android:textAllCaps="true"
+            android:textColor="@color/gray_color"
+            android:textSize="@dimen/text_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvResturantNumber"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:divider="@drawable/divider"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lltRestuarantMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvResturantNumber"
+                android:layout_weight="1"
+                android:background="@drawable/borderwithwhitebackground"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_small">
+
+                <ImageView
+                    android:layout_width="@dimen/margin_large"
+                    android:layout_height="@dimen/margin_large"
+                    android:layout_centerVertical="true"
+                    android:scaleX=".8"
+                    android:scaleY=".8"
+                    android:src="@drawable/message"
+                    android:tint="@color/app_green" />
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/message"
+                    android:textColor="@color/app_green"
+                    android:textSize="@dimen/text_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lltResturanrtCall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvResturantNumber"
+                android:layout_weight="1"
+                android:background="@drawable/borderwithwhitebackground"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_small">
+
+                <ImageView
+                    android:layout_width="@dimen/margin_large"
+                    android:layout_height="@dimen/margin_large"
+                    android:layout_centerVertical="true"
+                    android:scaleX=".8"
+                    android:scaleY=".8"
+                    android:src="@drawable/phone"
+                    android:tint="@color/app_green" />
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/call"
+                    android:textColor="@color/app_green"
+                    android:textSize="@dimen/text_normal" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltContactRecipient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_xsmall"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingTop="@dimen/margin_small">
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvRecipienttext"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margin_small"
+            android:text="@string/recipient"
+            android:textAllCaps="true"
+            android:textColor="@color/app_text_black5"
+            android:textSize="@dimen/text_medium" />
+
+        <!--<com.obs.CustomTextView
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Project Pizza"
+            android:layout_below="@+id/tvRecipienttext"
+            android:textSize="@dimen/text_normal"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            />-->
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvRecipientName"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRecipienttext"
+            android:paddingStart="@dimen/margin_small"
+            android:text="Johnson"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvRecipientNumber"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRecipientName"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:paddingStart="@dimen/margin_small"
+            android:text="+1234567890"
+            android:textAllCaps="true"
+            android:textColor="@color/gray_color"
+            android:textSize="@dimen/text_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRecipientNumber"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lltRecipientMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvResturantNumber"
+                android:layout_weight="1"
+                android:background="@drawable/borderwithwhitebackground"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_small">
+
+                <ImageView
+                    android:layout_width="@dimen/margin_large"
+                    android:layout_height="@dimen/margin_large"
+                    android:layout_centerVertical="true"
+                    android:scaleX=".8"
+                    android:scaleY=".8"
+                    android:src="@drawable/message"
+
+                    android:tint="@color/app_green" />
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/message"
+                    android:textColor="@color/app_green"
+                    android:textSize="@dimen/text_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lltRecipientCall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvRecipientNumber"
+                android:layout_weight="1"
+                android:background="@drawable/borderwithwhitebackground"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_small">
+
+                <ImageView
+                    android:layout_width="@dimen/margin_large"
+                    android:layout_height="@dimen/margin_large"
+                    android:layout_centerVertical="true"
+                    android:scaleX=".8"
+                    android:scaleY=".8"
+                    android:src="@drawable/phone"
+                    android:tint="@color/app_green" />
+
+                <com.obs.CustomTextView
+                    style="@style/ClanProForUBER_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/call"
+                    android:textColor="@color/app_green"
+                    android:textSize="@dimen/text_normal" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

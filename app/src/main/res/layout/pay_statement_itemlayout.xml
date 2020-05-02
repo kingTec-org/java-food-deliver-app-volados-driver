@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/paystateRl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/d_buttomboarder"
+    android:layoutDirection="@string/layout_direction"
+    android:paddingBottom="10dp"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp"
+    android:paddingTop="10dp">
+
+    <com.obs.CustomTextView
+        android:id="@+id/tripdatetime"
+        style="@style/ClanProForUBER_News"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="start|center_vertical"
+        android:text="10/10/2017"
+        android:textColor="@color/colorblock"
+        android:textSize="16sp" />
+
+    <com.obs.CustomTextView
+        android:id="@+id/weekarrow"
+        style="@style/uber_clone_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:gravity="end|center_vertical"
+        android:text="q"
+        android:textSize="14dp" />
+
+    <com.obs.CustomTextView
+        android:id="@+id/tripamount"
+        style="@style/ClanProForUBER_News"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/weekarrow"
+        android:gravity="end|center_vertical"
+        android:paddingEnd="10dp"
+        android:text="100"
+        android:textColor="@color/cb_textColor"
+        android:textSize="16sp"
+        android:visibility="visible"/>
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register_car_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="gofereatsdriver.views.signinsignup.RegisterCarDetailsActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/vehicle_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilVehicleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/edtVehicleName"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/vehicle_name"
+                        android:singleLine="true"
+                        android:textColor="@color/app_text_black2"
+                        android:textSize="@dimen/text_xlarge"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/vehicle_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vehicle_name"
+                android:layout_margin="@dimen/margin_normal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilVehicleNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/edtVehicleNumber"
+                        style="@style/ClanProForUBER_News"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/vehicle_number"
+                        android:singleLine="true"
+                        android:textColor="@color/app_text_black2"
+                        android:textSize="@dimen/text_xlarge"
+                        android:textAlignment="viewStart"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <Spinner
+                android:id="@+id/spnVehicleType"
+                style="@style/ClanProForUBER_News"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vehicle_number"
+                android:layout_margin="@dimen/margin_normal"
+                android:background="@drawable/d_buttomboarder"
+                android:paddingStart="-10dp"
+                android:textSize="@dimen/text_xlarge"
+                android:textAlignment="viewStart"/>
+
+            <RelativeLayout
+                android:id="@+id/rltNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spnVehicleType"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal">
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_normal"
+                    android:background="@color/app_green"
+                    android:paddingBottom="@dimen/margin_xxsmall"
+                    android:text="@string/continuec"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

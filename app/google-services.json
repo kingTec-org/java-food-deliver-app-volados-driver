@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "432533484146",
+    "firebase_url": "https://gofergrocery-306fb.firebaseio.com",
+    "project_id": "gofergrocery-306fb",
+    "storage_bucket": "gofergrocery-306fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432533484146:android:483695d01d0f9edfa408eb",
+        "android_client_info": {
+          "package_name": "com.trioangle.gofergrocerydriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432533484146-bbqrdbfatk9hshib6kco43fvd0daesus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS3bJRUo27xon5vWH0XYIH_z1vJo0p5g0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432533484146-bbqrdbfatk9hshib6kco43fvd0daesus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432533484146:android:494f4d201227dd87a408eb",
+        "android_client_info": {
+          "package_name": "com.trioangle.gofergrocerystore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432533484146-bbqrdbfatk9hshib6kco43fvd0daesus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS3bJRUo27xon5vWH0XYIH_z1vJo0p5g0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432533484146-bbqrdbfatk9hshib6kco43fvd0daesus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432533484146:android:6e06af9fdb7f8c47a408eb",
+        "android_client_info": {
+          "package_name": "com.trioangle.gofergroceryuser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432533484146-bbqrdbfatk9hshib6kco43fvd0daesus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS3bJRUo27xon5vWH0XYIH_z1vJo0p5g0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432533484146-bbqrdbfatk9hshib6kco43fvd0daesus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

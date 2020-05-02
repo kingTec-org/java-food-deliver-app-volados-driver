@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:keepScreenOn="true"
+    tools:context="gofereatsdriver.views.main.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rltHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header"
+        android:background="@color/apptheme">
+
+        <ImageView
+            android:id="@+id/ivHomeList"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@drawable/list"
+            android:tint="@color/white"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/ivHomeList"
+            android:background="@color/button_material_light"
+            android:visibility="gone" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvDriverStatus"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/ivHomeList"
+            android:paddingStart="@dimen/margin_normal"
+            android:text="@string/offline"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_xlarge" />
+        <!--android:thumb="@drawable/n2_sheet_switch_thumb"
+            app:track="@drawable/n2_sheet_switch_track"-->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swDriverStatus"
+            style="@style/SwitchCompatStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:checked="false" />
+
+        <com.obs.CustomTextView
+            android:id="@+id/tvCheckDriverStatus"
+            style="@style/ClanProForUBER_Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:background="@color/app_red"
+            android:padding="@dimen/margin_xxsmall"
+            android:text="@string/checkstatus"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_xlarge"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rltHeader"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/iv_line"
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:background="#ffffff" />
+
+
+    </RelativeLayout>
+
+
+    <!-- android:animateLayoutChanges="true"-->
+    <FrameLayout
+        android:id="@+id/frameMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navMain"
+        android:layout_below="@+id/rltHeader"></FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:animateLayoutChanges="false"
+        android:background="@color/apptheme"
+        android:paddingBottom="@dimen/margin_xxsmall"
+        android:paddingTop="@dimen/margin_xxsmall"
+        android:splitMotionEvents="false"
+        app:itemIconTint="@color/nav_item_state_list"
+        app:itemTextColor="@color/nav_item_state_list"
+        app:menu="@menu/bottom_nav_items" />
+</RelativeLayout>
